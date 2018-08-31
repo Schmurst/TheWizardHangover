@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   welcomeScreenVersion: '1.9.0 '
   playmakerVersion: 
-  showWelcomeScreen: 1
+  showWelcomeScreen: 0
   showUpgradeGuide: 0
-  lastAutoUpdateSignature: 
+  lastAutoUpdateSignature: '2018.2.6f1__C:/Users/lawre/Documents/Unity Projects/WizardHangover/TheWizardHangover/Assets__ '
   useLegacyNetworking: 0
