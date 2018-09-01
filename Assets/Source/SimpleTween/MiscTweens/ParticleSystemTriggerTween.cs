@@ -2,15 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleSystemTriggerTween : MonoBehaviour {
+public class ParticleSystemTriggerTween : MonoBehaviour, SimpleTween.ITweenEvent
+{
+    [SerializeField] ParticleSystem m_particles;
+    [SerializeField] float m_duration = 1f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Awake()
+    {
+        m_particles.Pause();
+    }
+
+    void SimpleTween.ITweenEvent.Play()
+    {
+        m_particles.Play();
+        DoAfterSeconds(m_particles.Stop, m_duration);
+    }
+
+    IEnumerator DoAfterSecondsRoutine(System.Action _action, float _seconds)
+    {
+        yield return new WaitForSeconds(_seconds);
+        _action();
+    }
+
+    void DoAfterSeconds(System.Action _action, float _seconds)
+    {
+        StartCoroutine(DoAfterSecondsRoutine(_action, _seconds));
+    }
 }

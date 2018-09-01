@@ -32,6 +32,8 @@ namespace SimpleTween
 				return;
 			
 			var type = m_target.GetType ();
+            if (m_target is ITweenEvent)
+                type = typeof(ITweenEvent);
 			HashSet<TweenType> validTweenTypes;
 			if(!TweenManager.UsableTweensByType.TryGetValue(type, out validTweenTypes))
 			{
@@ -64,23 +66,25 @@ namespace SimpleTween
 		}
 
 		//--------------------------------------------------------------------------------
-		protected virtual IEnumerator Co_PlayTweens(Action _onComplete = null)
-		{
-			Debug.LogFormat("Started Tween on {0}", name);
-			m_isTweenInProgress = true;
+        protected virtual IEnumerator Co_PlayTweens(Action _onComplete = null)
+        {
+            if(m_target is ITweenEvent)
+            {
+                ((ITweenEvent)m_target).Play();
+                yield break;
+            }
 
-			var animations = new List<Coroutine> ();
-			int started = 0, completed = 0;
-			Action onCompleted = ()=>{++completed;};
-			var waitForAnimsToFinish = new WaitUntil(()=>{return started == completed;});
-			
-			for (int i = 0; i < m_tweens.Count; i++)
-			{
-                if(m_tweens[i] is ITweenEvent)
-                {
-                    ((ITweenEvent)m_tweens[i]).Play();
-                    continue;
-                }
+            Debug.LogFormat("Started Tween on {0}", name);
+            m_isTweenInProgress = true;
+
+            var animations = new List<Coroutine> ();
+            int started = 0, completed = 0;
+            Action onCompleted = ()=>{++completed;};
+            var waitForAnimsToFinish = new WaitUntil(()=>{return started == completed;});
+
+            
+            for (int i = 0; i < m_tweens.Count; i++)
+            {
 
 				var routine = StartCoroutine (m_tweens [i].Co_PlayTween (onCompleted));
 				animations.Add (routine);
