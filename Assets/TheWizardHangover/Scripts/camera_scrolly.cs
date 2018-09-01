@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class camera_scrolly : MonoBehaviour {
-    public float mouse_fraction;
+    
 
     // Use this for initialization
     void Start () {
@@ -20,7 +20,7 @@ public class camera_scrolly : MonoBehaviour {
         Camera c = Camera.main;
         Vector3 offset = new Vector3(0.0f,0.0f,0.0f);
 
-        mouse_fraction = Input.mousePosition.x / c.pixelWidth;
+        float mouse_fraction = Input.mousePosition.x / c.pixelWidth;
         mouse_fraction = Mathf.Clamp(mouse_fraction, 0.0f, 1.0f);
         if (mouse_fraction < mouse_buffer_on_edge_of_screen) {
             // move leftwards, faster if nearer edge of screen
