@@ -9,6 +9,7 @@ public class level_transition : MonoBehaviour {
     public int NextSceneIndex = 1;
     public bool Fading = false;
     public GameObject theImages = null;
+    public GameObject Flyer = null;
 
     public void EnableButton()
     {
@@ -44,12 +45,16 @@ public class level_transition : MonoBehaviour {
 
     private void ResetFade()
     {
+        Debug.Log("ResetFade");
         Fading = false;
         theImages.SetActive(false);
         Images = transform.Find("Images").gameObject.GetComponentsInChildren<Image>(true);
         foreach (Image image in Images) {
             image.enabled = false;
         }
+        Flyer = GameObject.Find("Flyer") ? GameObject.Find("Flyer").gameObject : null;
+        if (Flyer)
+            Flyer.SetActive(false);
     }
 
     private void RenderImage(float aAlpha, int active_image_index)
@@ -73,13 +78,16 @@ public class level_transition : MonoBehaviour {
             int active_image_index = Mathf.Clamp((int)(Images.Length * t),0, Images.Length-1);
             RenderImage(t, active_image_index);
         }
-        SceneManager.LoadScene(NextSceneIndex++);
+        if(NextSceneIndex < SceneManager.sceneCountInBuildSettings) {
+            SceneManager.LoadScene(NextSceneIndex++);
+        } 
         while (t > 0.0f) {
             yield return new WaitForEndOfFrame();
             t = Mathf.Clamp01(t - Time.deltaTime / aFadeInTime);
             int active_image_index = Mathf.Clamp((int)(Images.Length * t), 0, Images.Length - 1);
             RenderImage(t, active_image_index);
         }
+        
         Debug.Log("Finished fade");
         ResetFade(); 
     }
@@ -87,6 +95,16 @@ public class level_transition : MonoBehaviour {
     private void StartFade(float aFadeOutTime, float aFadeInTime)
     {
         Debug.Log("StartFade");
+        // last level we present flyer, then restart
+        if (Flyer) {
+            if(Flyer.active) {
+                NextSceneIndex = 0;
+            } else {
+                Flyer.SetActive(true);
+                return;
+            }
+        }
+
         Fading = true;
         theImages.SetActive(true);
         GetComponentInChildren<Button>().gameObject.SetActive(false);
