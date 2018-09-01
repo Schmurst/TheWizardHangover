@@ -64,7 +64,7 @@ namespace SimpleTween
 		}
 
 		//--------------------------------------------------------------------------------
-		protected IEnumerator Co_PlayTweens(Action _onComplete = null)
+		protected virtual IEnumerator Co_PlayTweens(Action _onComplete = null)
 		{
 			Debug.LogFormat("Started Tween on {0}", name);
 			m_isTweenInProgress = true;
