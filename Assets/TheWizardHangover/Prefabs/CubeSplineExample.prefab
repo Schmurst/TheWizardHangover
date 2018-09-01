@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 33919715289310226}
   - component: {fileID: 23641473758044436}
   - component: {fileID: 65606101557870866}
+  - component: {fileID: 114201968251742528}
   - component: {fileID: 114176906757230760}
   m_Layer: 0
   m_Name: CubeSplineExample
@@ -387,3 +388,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114201968251742528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089655508460946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 114176906757230760}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 0

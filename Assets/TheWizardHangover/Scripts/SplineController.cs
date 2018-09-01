@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using SimpleTween;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,8 +9,8 @@ using UnityEngine.EventSystems;
 /// <summary>
 /// Getting local position from inside the current object
 /// </summary>
-public class SplineController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler,
-                                IPointerUpHandler, IPointerClickHandler
+public class SplineController : MonoBehaviour, SimpleTween.ITweenEvent// IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler,
+                                //IPointerUpHandler, IPointerClickHandler
 {
     [SerializeField]
     SimpleTween.EventType m_eventType;
@@ -26,15 +28,15 @@ public class SplineController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private LTSpline m_splineVisualizer;
     private bool isExecuting = false;
 
-    void OnEnable() { if (m_eventType == SimpleTween.EventType.onEnable) ExecuteSpline(); }
-    public void OnPointerEnter(PointerEventData eventData) { if (m_eventType == SimpleTween.EventType.pointerEnter && !isExecuting) StartCoroutine(ExecuteSpline()); }
-    public void OnPointerExit(PointerEventData eventData) { if (m_eventType == SimpleTween.EventType.pointerExit && !isExecuting) StartCoroutine(ExecuteSpline()); }
-    public void OnPointerDown(PointerEventData eventData) { if (m_eventType == SimpleTween.EventType.pointerDown && !isExecuting) StartCoroutine(ExecuteSpline()); }
-    public void OnPointerUp(PointerEventData eventData) { if (m_eventType == SimpleTween.EventType.pointerUp && !isExecuting) StartCoroutine(ExecuteSpline()); }
-    public void OnPointerClick(PointerEventData eventData) {
-        if (m_eventType == SimpleTween.EventType.pointerClick && !isExecuting)
-            StartCoroutine(ExecuteSpline());
-    }
+    //void OnEnable() { if (m_eventType == SimpleTween.EventType.onEnable) ExecuteSpline(); }
+    //public void OnPointerEnter(PointerEventData eventData) { if (m_eventType == SimpleTween.EventType.pointerEnter && !isExecuting) StartCoroutine(ExecuteSpline()); }
+    //public void OnPointerExit(PointerEventData eventData) { if (m_eventType == SimpleTween.EventType.pointerExit && !isExecuting) StartCoroutine(ExecuteSpline()); }
+    //public void OnPointerDown(PointerEventData eventData) { if (m_eventType == SimpleTween.EventType.pointerDown && !isExecuting) StartCoroutine(ExecuteSpline()); }
+    //public void OnPointerUp(PointerEventData eventData) { if (m_eventType == SimpleTween.EventType.pointerUp && !isExecuting) StartCoroutine(ExecuteSpline()); }
+    //public void OnPointerClick(PointerEventData eventData) {
+    //    if (m_eventType == SimpleTween.EventType.pointerClick && !isExecuting)
+    //        StartCoroutine(ExecuteSpline());
+    //}
 
     // Use this for initialization
     void Start () {
@@ -82,5 +84,10 @@ public class SplineController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         //{
         //    m_splineVisualizer.gizmoDraw();
         //}
+    }
+
+    void ITweenEvent.Play()
+    {
+        StartCoroutine(ExecuteSpline());
     }
 }

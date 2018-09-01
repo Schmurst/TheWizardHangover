@@ -97,11 +97,11 @@ MonoBehaviour:
       logMin: -8
       logMax: 4
   bloom:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.5
-        threshold: 1.1
+        intensity: 0
+        threshold: 1
         softKnee: 0.487
         radius: 4
         antiFlicker: 0
@@ -305,10 +305,10 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.038
+      intensity: 0
   grain:
     m_Enabled: 1
     m_Settings:
