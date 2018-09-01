@@ -113,6 +113,22 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &296065036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1177409956137160, guid: febd7a208b3156f4090a4f1b05ae4777,
+    type: 2}
+  m_PrefabInternal: {fileID: 1430625011}
+--- !u!225 &296065037
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 296065036}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &710205408
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,18 +412,13 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f303cb62ccb6b79438dcefa7e5935384, type: 3}
   m_IsPrefabAsset: 0
---- !u!1001 &1244813121
+--- !u!1001 &1430625011
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224823336693072500, guid: febd7a208b3156f4090a4f1b05ae4777,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 224823336693072500, guid: febd7a208b3156f4090a4f1b05ae4777,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -498,10 +509,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1850512718257978, guid: febd7a208b3156f4090a4f1b05ae4777, type: 2}
+    - target: {fileID: 1196423072186236, guid: febd7a208b3156f4090a4f1b05ae4777, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1177409956137160, guid: febd7a208b3156f4090a4f1b05ae4777, type: 2}
+      propertyPath: m_Name
+      value: Images
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 225230347423686804, guid: febd7a208b3156f4090a4f1b05ae4777, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: febd7a208b3156f4090a4f1b05ae4777, type: 2}
   m_IsPrefabAsset: 0

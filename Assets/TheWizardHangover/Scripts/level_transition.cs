@@ -8,6 +8,17 @@ public class level_transition : MonoBehaviour {
     public Image[] Images;
     public int NextSceneIndex = 1;
     public bool Fading = false;
+    public GameObject theImages = null;
+
+    public void EnableButton()
+    {
+        GetComponentInChildren<Button>().gameObject.SetActive(true);
+    }
+
+    public void ActuallyLoadNextScene()
+    {
+        LoadNextScene(3.0f, 2.0f);
+    }
 
     public void LoadNextScene(float aFadeOutTime, float aFadeInTime)
     {
@@ -30,14 +41,14 @@ public class level_transition : MonoBehaviour {
     private void ResetFade()
     {
         Fading = false;
-        gameObject.SetActive(false);
-        Images = GetComponentsInChildren<Image>();
+        theImages.SetActive(false);
+        Images = GetComponentsInChildren<Image>(true);
     }
 
-    private void DrawQuad(float aAlpha, int active_image_index)
+    private void RenderImage(float aAlpha, int active_image_index)
     {
         // Canvas
-        GetComponent<CanvasGroup>().alpha = aAlpha;
+        GetComponentInChildren<CanvasGroup>().alpha = aAlpha;
         foreach (Image image in Images) {
             image.enabled = false;
         }
@@ -51,22 +62,25 @@ public class level_transition : MonoBehaviour {
             yield return new WaitForEndOfFrame();
             t = Mathf.Clamp01(t + Time.deltaTime / aFadeOutTime);
             int active_image_index = Mathf.Clamp((int)(Images.Length * t),0, Images.Length-1);
-            DrawQuad(t, active_image_index);
+            RenderImage(t, active_image_index);
         }
         SceneManager.LoadScene(NextSceneIndex++);
         while (t > 0.0f) {
             yield return new WaitForEndOfFrame();
             t = Mathf.Clamp01(t - Time.deltaTime / aFadeInTime);
             int active_image_index = Mathf.Clamp((int)(Images.Length * t), 0, Images.Length - 1);
-            DrawQuad(t, active_image_index);
+            RenderImage(t, active_image_index);
         }
-        ResetFade();
+        Debug.Log("Finished fade");
+        ResetFade(); 
     }
 
     private void StartFade(float aFadeOutTime, float aFadeInTime)
     {
+        Debug.Log("StartFade");
         Fading = true;
-        gameObject.SetActive(true);
+        theImages.SetActive(true);
+        GetComponentInChildren<Button>().gameObject.SetActive(false);
         StartCoroutine(Fade(aFadeOutTime, aFadeInTime));
     }
 }
