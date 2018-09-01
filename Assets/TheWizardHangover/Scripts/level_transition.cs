@@ -12,7 +12,7 @@ public class level_transition : MonoBehaviour {
 
     public void EnableButton()
     {
-        GetComponentInChildren<Button>().gameObject.SetActive(true);
+        GetComponentInChildren<Button>(true).gameObject.SetActive(true);
     }
 
     public void ActuallyLoadNextScene()
