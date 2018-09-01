@@ -806,12 +806,10 @@ MonoBehaviour:
   m_target: {fileID: 1348956625}
   m_tweens:
   - {fileID: 1348956619}
-  - {fileID: 1348956624}
-  m_events: 08000000
+  m_events: 20000000
   m_cooldownSeconds: 0
   m_returnTweens:
   - {fileID: 1348956618}
-  - {fileID: 1348956624}
 --- !u!65 &1348956621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -880,7 +878,8 @@ MonoBehaviour:
   m_duration: 1
   m_delay: 0
   m_resetOnComplete: 0
-  m_euler: {x: 90, y: 90, z: 90}
+  m_isLocal: 1
+  m_euler: {x: 45, y: 45, z: 45}
   m_easeCurve:
     serializedVersion: 2
     m_Curve:
