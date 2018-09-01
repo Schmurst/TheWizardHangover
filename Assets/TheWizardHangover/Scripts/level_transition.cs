@@ -54,7 +54,7 @@ public class level_transition : MonoBehaviour {
 
     private void RenderImage(float aAlpha, int active_image_index)
     {
-        Debug.Log("RenderImage ("+ active_image_index+")" + aAlpha);
+        //Debug.Log("RenderImage ("+ active_image_index+")" + aAlpha);
         // Canvas
         GetComponentInChildren<CanvasGroup>().alpha = aAlpha;
         foreach (Image image in Images) {
@@ -65,7 +65,7 @@ public class level_transition : MonoBehaviour {
 
     private IEnumerator Fade(float aFadeOutTime, float aFadeInTime)
     {
-        Debug.Log("Fade");
+        //Debug.Log("Fade");
         float t = 0.0f;
         while (t < 1.0f) {
             yield return new WaitForEndOfFrame();
