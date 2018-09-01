@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 81379537521143860}
   - component: {fileID: 114687078192990476}
   - component: {fileID: 114904489661239720}
+  - component: {fileID: 114107575031419644}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1044778297481888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.85456467, y: 1.8527288, z: -1.332511}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4086644401344464}
@@ -83,13 +84,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1049862332643504}
-  m_LocalRotation: {x: 0.23083624, y: -0.8710623, z: 0.2188773, w: 0.37424317}
-  m_LocalPosition: {x: 6.384565, y: 4.133271, z: 8.18251}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000086091156944}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 33.648003, y: -138.56201, z: -16.636002}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4304675019073844
 Transform:
   m_ObjectHideFlags: 1
@@ -125,7 +126,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 26.991467
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -150,6 +151,21 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1049862332643504}
   m_Enabled: 1
+--- !u!114 &114107575031419644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1049862332643504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d29a8b28be58c41883ed23a710c766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouse_fraction: 0
+  mouse_buffer_on_edge_of_screen: 0.1
+  max_scroll_speed: 0.05
+  scene_extremities: {x: -10, y: 10}
 --- !u!114 &114326518551857762
 MonoBehaviour:
   m_ObjectHideFlags: 1

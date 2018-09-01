@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/cupboard.unity
-    guid: 8705002de0574a145883430eadf9ca7f
+    path: Assets/Scenes/Whitebox/Cupboard_WB.unity
+    guid: 30e6181bd68cce949b08ee428839634c
   - enabled: 1
-    path: Assets/Scenes/bedroom.unity
-    guid: c83e631ad9f331e41a7ff212390e536f
+    path: Assets/Scenes/Whitebox/Living_Room_WB.unity
+    guid: 25c9a0108bffce94da2874357ce81757
   - enabled: 1
-    path: Assets/Scenes/testcupboard.unity
-    guid: 573bd43dffbedc048bb8cbbc033595d5
+    path: Assets/Scenes/Whitebox/Kitchen_WB.unity
+    guid: 29b2ab4a624f12e479113bd047b16c5b
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Bathroom_WB.unity
+    guid: 5ab9ce607da368747ba81beba679414f
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Bedroom_WB.unity
+    guid: 45977f52eaf205a48926c570440cfb93
   m_configObjects: {}
