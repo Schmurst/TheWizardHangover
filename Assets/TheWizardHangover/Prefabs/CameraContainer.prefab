@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d29a8b28be58c41883ed23a710c766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 9ea9e45f6b54ecf48b8cd5e84b1a1041, type: 3}
   mouse_buffer_on_edge_of_screen: 0.1
   max_scroll_speed: 0.05
   scene_extremities: {x: -13.39, y: -8.05}
