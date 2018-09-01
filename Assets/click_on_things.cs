@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class click_on_things : MonoBehaviour {
     public GameObject FadeCanvas = null;
+    public Image[] Images;
     private static click_on_things m_Instance = null;
     private string m_LevelName = "";
     private int m_LevelIndex = 0;
+    public int ActiveImageIndex = 0;
     private bool m_Fading = false;
 
     private static click_on_things Instance
@@ -32,6 +34,9 @@ public class click_on_things : MonoBehaviour {
         DontDestroyOnLoad(this);
         DontDestroyOnLoad(FadeCanvas);
         m_Instance = this;
+        ActiveImageIndex = 0;
+        FadeCanvas.SetActive(false);
+        Images = FadeCanvas.GetComponentsInChildren<Image>();
     }
 
     private void DrawQuad(Color aColor, float aAlpha)
@@ -39,12 +44,18 @@ public class click_on_things : MonoBehaviour {
         // Canvas
         FadeCanvas.SetActive(true);
         FadeCanvas.GetComponent<CanvasGroup>().alpha = aAlpha;
+        foreach (Image image in Images) {
+            image.enabled = false;
+        }
+        Images[ActiveImageIndex].enabled = true;
     }
 
     private IEnumerator Fade(float aFadeOutTime, float aFadeInTime, Color aColor)
     {
         float t = 0.0f;
         while (t < 1.0f) {
+            ActiveImageIndex = (int)(Images.Length * t);
+
             yield return new WaitForEndOfFrame();
             t = Mathf.Clamp01(t + Time.deltaTime / aFadeOutTime);
             DrawQuad(aColor, t);
@@ -80,6 +91,7 @@ public class click_on_things : MonoBehaviour {
         Instance.m_LevelIndex = aLevelIndex;
         Instance.StartFade(aFadeOutTime, aFadeInTime, aColor);
     }
+   
 
     // Use this for initialization
     void Start () {
