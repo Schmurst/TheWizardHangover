@@ -6,11 +6,10 @@ namespace SimpleTween
 {
 	public class TweenRotationEuler : TweenTransform
 	{
-        [SerializeField] protected bool m_isLocal = true;
 		[SerializeField] Vector3 m_euler;
 		[SerializeField] AnimationCurve m_easeCurve;
 
-		Quaternion m_endRot;
+        Quaternion m_endRot;
 		
 		//--------------------------------------------------------------------------------
 		public new string name {get {return "TweenRotation";}}
@@ -19,18 +18,16 @@ namespace SimpleTween
 		protected override void OnAnimationInitialisation()
 		{
 			base.OnAnimationInitialisation();
-            m_initialRotation = m_isLocal ? m_target.localRotation : m_target.rotation;
-            m_endRot = Quaternion.Euler(m_isLocal ? m_initialRotation.eulerAngles + m_euler : m_euler);
+            m_endRot = m_initialRotation * Quaternion.Euler(m_euler);
 		}
 
 		//--------------------------------------------------------------------------------
 		protected override void UpdateTarget(float _pcnt)
 		{
-            var rot = Quaternion.LerpUnclamped(m_initialRotation, m_endRot, m_easeCurve.Evaluate(_pcnt));
-            if (m_isLocal)
-                m_target.localRotation = rot;
-            else
-                m_target.rotation = rot;
+            var rot = Quaternion.SlerpUnclamped(m_initialRotation, m_endRot, m_easeCurve.Evaluate(_pcnt));
+
+            m_target.localRotation = rot;
+
 		}
 	}
 }
