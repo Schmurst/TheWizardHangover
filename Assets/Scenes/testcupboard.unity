@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouse_percentage: 0
   mouse_buffer_on_edge_of_screen: 0.1
-  scroll_speed: 0.05
+  max_scroll_speed: 0.05
   scene_extremities: {x: -10, y: 10}
 --- !u!1 &305171610
 GameObject:
@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 637182907}
   - component: {fileID: 637182906}
   - component: {fileID: 637182910}
+  - component: {fileID: 637182911}
   m_Layer: 5
   m_Name: FadeCanvas
   m_TagString: Untagged
@@ -462,6 +463,17 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &637182911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 637182905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1562edfc792acfe478424446402f5984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &766269658
 GameObject:
   m_ObjectHideFlags: 0
