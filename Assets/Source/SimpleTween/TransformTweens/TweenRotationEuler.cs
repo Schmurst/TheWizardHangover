@@ -31,8 +31,6 @@ namespace SimpleTween
 
         protected override void ResetTarget()
         {
-            base.ResetTarget();
-
             m_target.localRotation= m_initialRotation;
         }
     }
