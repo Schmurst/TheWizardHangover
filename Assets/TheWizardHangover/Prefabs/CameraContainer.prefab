@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114687078192990476}
   - component: {fileID: 114904489661239720}
   - component: {fileID: 114107575031419644}
+  - component: {fileID: 114406554763857132}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -165,7 +166,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: 9ea9e45f6b54ecf48b8cd5e84b1a1041, type: 3}
   mouse_buffer_on_edge_of_screen: 0.1
   max_scroll_speed: 0.05
-  scene_extremities: {x: -13.39, y: -8.05}
+  scene_extremities: {x: -12, y: -8.2}
 --- !u!114 &114326518551857762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,6 +181,23 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &114406554763857132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1049862332643504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3925830be24d033429a5d84f9e9267f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BloomValue: 0.2
+  BloomThreshold: 0.5
+  ChromaticAberrationValue: 1
+  HueShift: 180
+  EffectSpeed: 2
+  AnimationCurveType: 2
 --- !u!114 &114687078192990476
 MonoBehaviour:
   m_ObjectHideFlags: 1
