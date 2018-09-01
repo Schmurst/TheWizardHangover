@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class click_on_things : MonoBehaviour {
-
+    public GameObject FadeCanvas = null;
     private static click_on_things m_Instance = null;
     private string m_LevelName = "";
     private int m_LevelIndex = 0;
@@ -29,22 +30,15 @@ public class click_on_things : MonoBehaviour {
     private void Awake()
     {
         DontDestroyOnLoad(this);
+        DontDestroyOnLoad(FadeCanvas);
         m_Instance = this;
     }
 
     private void DrawQuad(Color aColor, float aAlpha)
     {
-        if (!m_Instance.gameObject.GetComponent<GUITexture>()) {
-            m_Instance.gameObject.AddComponent<GUITexture>();
-        }
-        m_Instance.gameObject.transform.localScale = Vector3.zero;
-        Texture2D tex2d = new Texture2D(1, 1);
-        tex2d.SetPixels(new Color[1] { Color.white });
-        tex2d.Apply();
-        m_Instance.gameObject.GetComponent<GUITexture>().texture = tex2d;
-
-        m_Instance.GetComponent<GUITexture>().pixelInset = new Rect(0, 0, Screen.width, Screen.height);
-        m_Instance.GetComponent<GUITexture>().color = new Color(aColor.r, aColor.g, aColor.b, aAlpha);
+        // Canvas
+        FadeCanvas.SetActive(true);
+        FadeCanvas.GetComponent<CanvasGroup>().alpha = aAlpha;
     }
 
     private IEnumerator Fade(float aFadeOutTime, float aFadeInTime, Color aColor)
@@ -89,8 +83,8 @@ public class click_on_things : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        FadeCanvas.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()
