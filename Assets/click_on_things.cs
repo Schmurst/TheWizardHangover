@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class click_on_things : MonoBehaviour {
     public GameObject FadeCanvas = null;
-    public Image[] Images;
+    private Image[] Images;
     private static click_on_things m_Instance = null;
     private string m_LevelName = "";
     private int m_LevelIndex = 0;
-    public int ActiveImageIndex = 0;
+    private int ActiveImageIndex = 0;
     private bool m_Fading = false;
 
     private static click_on_things Instance
@@ -110,5 +110,6 @@ public class click_on_things : MonoBehaviour {
                 LoadScene("bedroom",3.0f,2.0f,Color.red);
             }
         }
+
     }
 }
