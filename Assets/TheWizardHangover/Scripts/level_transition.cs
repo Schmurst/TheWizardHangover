@@ -17,12 +17,16 @@ public class level_transition : MonoBehaviour {
 
     public void ActuallyLoadNextScene()
     {
+        Debug.Log("ActuallyLoadNextScene");
         LoadNextScene(3.0f, 2.0f);
     }
 
     public void LoadNextScene(float aFadeOutTime, float aFadeInTime)
     {
-        if (Fading) return;
+        if (Fading) {
+            Debug.Log("Fading early out");
+            return;
+        }
         StartFade(aFadeOutTime, aFadeInTime);
     }
 
@@ -43,11 +47,14 @@ public class level_transition : MonoBehaviour {
         Fading = false;
         theImages.SetActive(false);
         Images = transform.Find("Images").gameObject.GetComponentsInChildren<Image>(true);
+        foreach (Image image in Images) {
+            image.enabled = false;
+        }
     }
 
     private void RenderImage(float aAlpha, int active_image_index)
     {
-        //Debug.Log("RenderImage ("+ active_image_index+")" + aAlpha);
+        Debug.Log("RenderImage ("+ active_image_index+")" + aAlpha);
         // Canvas
         GetComponentInChildren<CanvasGroup>().alpha = aAlpha;
         foreach (Image image in Images) {
@@ -58,6 +65,7 @@ public class level_transition : MonoBehaviour {
 
     private IEnumerator Fade(float aFadeOutTime, float aFadeInTime)
     {
+        Debug.Log("Fade");
         float t = 0.0f;
         while (t < 1.0f) {
             yield return new WaitForEndOfFrame();
