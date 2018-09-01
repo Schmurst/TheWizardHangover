@@ -7,6 +7,7 @@ namespace SimpleTween
     public class TweenPositionOffset :  TweenTransform
     {
         [SerializeField] protected Vector3 m_maxOffset;
+        [SerializeField] protected bool m_isLocal = true;
 
         [SerializeField] protected AnimationCurve m_xCurve;
         [SerializeField] protected AnimationCurve m_yCurve;
@@ -22,7 +23,11 @@ namespace SimpleTween
             pos.x = Mathf.LerpUnclamped(m_initialPosition.x, m_maxOffset.x, m_xCurve.Evaluate(_pcnt));
             pos.y = Mathf.LerpUnclamped(m_initialPosition.y, m_maxOffset.y, m_yCurve.Evaluate(_pcnt));
             pos.z = Mathf.LerpUnclamped(m_initialPosition.z, m_maxOffset.z, m_zCurve.Evaluate(_pcnt));
-            m_target.position = pos;
+           
+            if(m_isLocal)
+                m_target.localPosition = pos;
+            else
+                m_target.position = pos;
         }
     }
 }
