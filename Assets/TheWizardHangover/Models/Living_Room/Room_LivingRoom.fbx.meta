@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 79970d8a34c8e9f48a7517d2585753f4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: CHair_A
+    100002: CHair_B
+    100004: CHair_C
+    100006: Couch
+    100008: Leg_1
+    100010: Leg_2
+    100012: Leg_3
+    100014: Leg_4
+    100016: Passenger_Seat2
+    100018: Passenger_Seat2 1
+    100020: Passenger_Seat3
+    100022: Passenger_Seat4
+    100024: Passenger_Seat_Frame2
+    100026: Passenger_Seat_Frame2 1
+    100028: Passenger_Seat_Frame3
+    100030: Passenger_Seat_Frame4
+    100032: PassengerSeat_Solo1
+    100034: PassengerSeat_Solo2
+    100036: PassengerSeat_Solo3
+    100038: PassengerSeat_Solo4
+    100040: pCube1
+    100042: pCube3
+    100044: pCube5
+    100046: polySurface1
+    100048: //RootNode
+    100050: SHelves
+    100052: Shelves
+    100054: SHelves1
+    100056: SHelves2
+    100058: TAble
+    100060: TableTop
+    100062: transform10
+    100064: transform11
+    100066: transform7
+    100068: transform8
+    100070: transform9
+    100072: Unit_A
+    100074: Unit_B
+    100076: Unit_C
+    400000: CHair_A
+    400002: CHair_B
+    400004: CHair_C
+    400006: Couch
+    400008: Leg_1
+    400010: Leg_2
+    400012: Leg_3
+    400014: Leg_4
+    400016: Passenger_Seat2
+    400018: Passenger_Seat2 1
+    400020: Passenger_Seat3
+    400022: Passenger_Seat4
+    400024: Passenger_Seat_Frame2
+    400026: Passenger_Seat_Frame2 1
+    400028: Passenger_Seat_Frame3
+    400030: Passenger_Seat_Frame4
+    400032: PassengerSeat_Solo1
+    400034: PassengerSeat_Solo2
+    400036: PassengerSeat_Solo3
+    400038: PassengerSeat_Solo4
+    400040: pCube1
+    400042: pCube3
+    400044: pCube5
+    400046: polySurface1
+    400048: //RootNode
+    400050: SHelves
+    400052: Shelves
+    400054: SHelves1
+    400056: SHelves2
+    400058: TAble
+    400060: TableTop
+    400062: transform10
+    400064: transform11
+    400066: transform7
+    400068: transform8
+    400070: transform9
+    400072: Unit_A
+    400074: Unit_B
+    400076: Unit_C
+    2100000: phong1
+    2100002: phong3
+    2100004: phong2
+    2100006: Default_Material
+    2100008: phong4
+    2100010: phong5
+    2300000: Leg_1
+    2300002: Leg_2
+    2300004: Leg_3
+    2300006: Leg_4
+    2300008: Passenger_Seat2
+    2300010: Passenger_Seat2 1
+    2300012: Passenger_Seat4
+    2300014: Passenger_Seat_Frame2
+    2300016: Passenger_Seat_Frame2 1
+    2300018: Passenger_Seat_Frame4
+    2300020: PassengerSeat_Solo1
+    2300022: PassengerSeat_Solo2
+    2300024: PassengerSeat_Solo3
+    2300026: PassengerSeat_Solo4
+    2300028: polySurface1
+    2300030: SHelves
+    2300032: SHelves1
+    2300034: SHelves2
+    2300036: TableTop
+    2300038: Unit_A
+    2300040: Unit_B
+    2300042: Unit_C
+    3300000: Leg_1
+    3300002: Leg_2
+    3300004: Leg_3
+    3300006: Leg_4
+    3300008: Passenger_Seat2
+    3300010: Passenger_Seat2 1
+    3300012: Passenger_Seat4
+    3300014: Passenger_Seat_Frame2
+    3300016: Passenger_Seat_Frame2 1
+    3300018: Passenger_Seat_Frame4
+    3300020: PassengerSeat_Solo1
+    3300022: PassengerSeat_Solo2
+    3300024: PassengerSeat_Solo3
+    3300026: PassengerSeat_Solo4
+    3300028: polySurface1
+    3300030: SHelves
+    3300032: SHelves1
+    3300034: SHelves2
+    3300036: TableTop
+    3300038: Unit_A
+    3300040: Unit_B
+    3300042: Unit_C
+    4300000: polySurface1
+    4300002: PassengerSeat_Solo1
+    4300004: PassengerSeat_Solo2
+    4300006: PassengerSeat_Solo3
+    4300008: PassengerSeat_Solo4
+    4300010: Passenger_Seat4
+    4300012: Passenger_Seat_Frame4
+    4300014: Passenger_Seat2
+    4300016: Passenger_Seat_Frame2
+    4300018: TableTop
+    4300020: Leg_1
+    4300022: Leg_2
+    4300024: Leg_3
+    4300026: Leg_4
+    4300028: Passenger_Seat2
+    4300030: Passenger_Seat_Frame2
+    4300032: SHelves2
+    4300034: SHelves
+    4300036: SHelves1
+    4300038: Unit_A
+    4300040: Unit_B
+    4300042: Unit_C
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
