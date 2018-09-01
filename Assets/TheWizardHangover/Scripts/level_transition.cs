@@ -52,9 +52,6 @@ public class level_transition : MonoBehaviour {
         foreach (Image image in Images) {
             image.enabled = false;
         }
-        Flyer = GameObject.Find("Flyer") ? GameObject.Find("Flyer").gameObject : null;
-        if (Flyer)
-            Flyer.SetActive(false);
     }
 
     private void RenderImage(float aAlpha, int active_image_index)
@@ -80,7 +77,12 @@ public class level_transition : MonoBehaviour {
         }
         if(NextSceneIndex < SceneManager.sceneCountInBuildSettings) {
             SceneManager.LoadScene(NextSceneIndex++);
-        } 
+        }
+        yield return new WaitForEndOfFrame();
+        //yield return new WaitForEndOfFrame();
+        Flyer = GameObject.Find("Flyer") ? GameObject.Find("Flyer").gameObject : null;
+        if (Flyer)
+            Flyer.SetActive(false);
         while (t > 0.0f) {
             yield return new WaitForEndOfFrame();
             t = Mathf.Clamp01(t - Time.deltaTime / aFadeInTime);
@@ -101,6 +103,8 @@ public class level_transition : MonoBehaviour {
                 NextSceneIndex = 0;
             } else {
                 Flyer.SetActive(true);
+
+                Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, -9.7f);
                 return;
             }
         }
