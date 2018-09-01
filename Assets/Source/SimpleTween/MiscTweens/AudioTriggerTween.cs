@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class AudioTriggerTween : MonoBehaviour, SimpleTween.ITweenEvent
 {
-    [SerializeField] string m_audioName;
+    [SerializeField] AudioInfo m_audioInfo;
 
     public void Play()
     {
-
+        AudioManager.Instance.Stop(m_audioInfo.m_Name);
+        AudioManager.Instance.PlayAudio(m_audioInfo);
     }
 }

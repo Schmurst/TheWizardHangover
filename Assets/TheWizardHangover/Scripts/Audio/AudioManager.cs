@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 
 public enum SoundType { Ambient = 0, Effect = 1, Voice = 2 };
 
+[System.Serializable]
 public class AudioInfo
 {
     public SoundType m_Type;
