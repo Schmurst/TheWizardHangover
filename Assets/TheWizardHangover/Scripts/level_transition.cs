@@ -42,11 +42,12 @@ public class level_transition : MonoBehaviour {
     {
         Fading = false;
         theImages.SetActive(false);
-        Images = GetComponentsInChildren<Image>(true);
+        Images = transform.Find("Images").gameObject.GetComponentsInChildren<Image>(true);
     }
 
     private void RenderImage(float aAlpha, int active_image_index)
     {
+        //Debug.Log("RenderImage ("+ active_image_index+")" + aAlpha);
         // Canvas
         GetComponentInChildren<CanvasGroup>().alpha = aAlpha;
         foreach (Image image in Images) {
