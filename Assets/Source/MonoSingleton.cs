@@ -11,5 +11,6 @@ public class MonoSingleton<T> : MonoEditorDebug where T : MonoSingleton<T>
     protected virtual void Awake()
     {
         m_me = this as T;
+        DontDestroyOnLoad(this);
     }
 }
