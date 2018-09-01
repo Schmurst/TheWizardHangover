@@ -25,14 +25,14 @@ public class camera_scrolly : MonoBehaviour {
         if (mouse_fraction < mouse_buffer_on_edge_of_screen) {
             // move leftwards, faster if nearer edge of screen
             float speed = (mouse_buffer_on_edge_of_screen - mouse_fraction) / mouse_buffer_on_edge_of_screen;
-            offset = new Vector3(-speed * max_scroll_speed, 0.0f, 0.0f);
+            offset = new Vector3(0.0f, 0.0f, speed * max_scroll_speed);
         } else if(mouse_fraction > 1.0f - mouse_buffer_on_edge_of_screen) {
             // move rightwards, faster if nearer edge of screen
             float speed = (mouse_fraction - 1.0f + mouse_buffer_on_edge_of_screen) / mouse_buffer_on_edge_of_screen;
-            offset = new Vector3(speed * max_scroll_speed, 0.0f, 0.0f);
+            offset = new Vector3(0.0f, 0.0f, -speed * max_scroll_speed);
         }
 
         transform.position += offset;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, scene_extremities.x, scene_extremities.y), transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.Clamp(transform.position.z, scene_extremities.x, scene_extremities.y));
     }
 }
