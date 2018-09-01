@@ -19,6 +19,9 @@ namespace SimpleTween
 								IPointerUpHandler, IPointerClickHandler
 	{
 		[SerializeField] EventType[] 	m_events;
+        [SerializeField] float m_cooldownSeconds = 0f;
+
+        float m_timeOfLastEvent;
 
 		//--------------------------------------------------------------------------------
 		public new string name {get {return "";}}
@@ -35,6 +38,9 @@ namespace SimpleTween
 			if (_type == EventType.none)
 				return false;
 
+            if (Time.time < m_timeOfLastEvent + m_cooldownSeconds)
+                return false;
+
 			for (int i = 0; i < m_events.Length; i++)
 				if (m_events[i] == _type)
 					return true;
@@ -46,7 +52,10 @@ namespace SimpleTween
 		void Execute(EventType _type)
 		{
 			if(ShouldPlayEvent(_type))
-				Play();
+            {
+                Play();
+                m_timeOfLastEvent = Time.time;            
+            }
 		}
 	}
 }
