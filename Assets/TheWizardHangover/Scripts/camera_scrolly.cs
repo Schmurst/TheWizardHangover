@@ -18,6 +18,10 @@ public class camera_scrolly : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (Input.GetKey(KeyCode.Escape)) {
+            Application.Quit();
+        }
+
         Camera c = Camera.main;
         Vector3 offset = new Vector3(0.0f,0.0f,0.0f);
 
