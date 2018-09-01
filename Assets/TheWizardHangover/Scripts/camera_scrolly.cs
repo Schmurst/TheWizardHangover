@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class camera_scrolly : MonoBehaviour {
-    
+
+    public Texture2D cursorTexture;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+    }
 
     [Range(0.0f, 0.3f)]
     public float mouse_buffer_on_edge_of_screen = 0.1f;
