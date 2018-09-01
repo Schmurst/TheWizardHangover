@@ -20,6 +20,14 @@ namespace SimpleTween
             }
         }
 
+        protected override bool ShouldPlayEvent(EventType _type)
+        {
+            if (m_isTweenInProgress)
+                return false;
+
+            return base.ShouldPlayEvent(_type);
+        }
+
         protected override void OnValidate()
         {
             base.OnValidate();

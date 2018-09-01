@@ -76,6 +76,12 @@ namespace SimpleTween
 			
 			for (int i = 0; i < m_tweens.Count; i++)
 			{
+                if(m_tweens[i] is ITweenEvent)
+                {
+                    ((ITweenEvent)m_tweens[i]).Play();
+                    continue;
+                }
+
 				var routine = StartCoroutine (m_tweens [i].Co_PlayTween (onCompleted));
 				animations.Add (routine);
 				started++;

@@ -26,7 +26,11 @@ namespace SimpleTween
 		//--------------------------------------------------------------------------------
 		protected override void UpdateTarget(float _pcnt)
 		{
-			m_target.rotation = Quaternion.SlerpUnclamped(m_initialRotation, m_endRot, m_easeCurve.Evaluate(_pcnt));
+            var rot = Quaternion.LerpUnclamped(m_initialRotation, m_endRot, m_easeCurve.Evaluate(_pcnt));
+            if (m_isLocal)
+                m_target.localRotation = rot;
+            else
+                m_target.rotation = rot;
 		}
 	}
 }

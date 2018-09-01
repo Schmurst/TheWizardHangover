@@ -33,7 +33,7 @@ namespace SimpleTween
 		public void OnPointerUp  	(PointerEventData eventData){Execute (EventType.pointerUp);}
 		public void OnPointerClick 	(PointerEventData eventData){Execute (EventType.pointerClick);}
 		//--------------------------------------------------------------------------------
-		protected bool ShouldPlayEvent(EventType _type)
+        protected virtual bool ShouldPlayEvent(EventType _type)
 		{
 			if (_type == EventType.none)
 				return false;
