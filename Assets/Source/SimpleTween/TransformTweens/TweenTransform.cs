@@ -22,7 +22,7 @@ namespace  SimpleTween
 		//--------------------------------------------------------------------------------
 		protected override void OnAnimationInitialisation()
 		{
-			m_initialPosition = m_target.position;
+            m_initialPosition = m_target.position;
 			m_initialScale = m_target.localScale;
 			m_initialRotation = m_target.rotation;
 		}

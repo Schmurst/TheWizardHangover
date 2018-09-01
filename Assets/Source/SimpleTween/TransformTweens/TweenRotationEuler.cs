@@ -6,6 +6,7 @@ namespace SimpleTween
 {
 	public class TweenRotationEuler : TweenTransform
 	{
+        [SerializeField] protected bool m_isLocal = true;
 		[SerializeField] Vector3 m_euler;
 		[SerializeField] AnimationCurve m_easeCurve;
 
@@ -18,7 +19,8 @@ namespace SimpleTween
 		protected override void OnAnimationInitialisation()
 		{
 			base.OnAnimationInitialisation();
-			m_endRot = Quaternion.Euler(m_euler);
+            m_initialRotation = m_isLocal ? m_target.localRotation : m_target.rotation;
+            m_endRot = Quaternion.Euler(m_isLocal ? m_initialRotation.eulerAngles + m_euler : m_euler);
 		}
 
 		//--------------------------------------------------------------------------------

@@ -21,7 +21,7 @@ namespace SimpleTween
 		[SerializeField] EventType[] 	m_events;
         [SerializeField] float m_cooldownSeconds = 0f;
 
-        float m_timeOfLastEvent;
+        protected float m_timeOfLastEvent;
 
 		//--------------------------------------------------------------------------------
 		public new string name {get {return "";}}
@@ -33,7 +33,7 @@ namespace SimpleTween
 		public void OnPointerUp  	(PointerEventData eventData){Execute (EventType.pointerUp);}
 		public void OnPointerClick 	(PointerEventData eventData){Execute (EventType.pointerClick);}
 		//--------------------------------------------------------------------------------
-		bool ShouldPlayEvent(EventType _type)
+		protected bool ShouldPlayEvent(EventType _type)
 		{
 			if (_type == EventType.none)
 				return false;
@@ -49,7 +49,7 @@ namespace SimpleTween
 		}
 		
 		//--------------------------------------------------------------------------------
-		void Execute(EventType _type)
+        protected virtual void Execute(EventType _type)
 		{
 			if(ShouldPlayEvent(_type))
             {

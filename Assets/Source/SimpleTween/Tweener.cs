@@ -11,7 +11,7 @@ namespace SimpleTween
 {
 	public class Tweener : MonoBehaviour
 	{
-		[SerializeField] Component m_target;
+		[SerializeField] protected Component m_target;
 		[SerializeField] protected List<Tween> m_tweens = new List<Tween>();
 
 		protected bool m_isTweenInProgress = false;
@@ -26,7 +26,7 @@ namespace SimpleTween
 		}
 
 		//--------------------------------------------------------------------------------
-		void OnValidate()
+		protected virtual void OnValidate()
 		{
 			if (m_target == null)
 				return;
@@ -64,7 +64,7 @@ namespace SimpleTween
 		}
 
 		//--------------------------------------------------------------------------------
-		protected IEnumerator Co_PlayTweens(Action _onComplete = null)
+		protected virtual IEnumerator Co_PlayTweens(Action _onComplete = null)
 		{
 			Debug.LogFormat("Started Tween on {0}", name);
 			m_isTweenInProgress = true;
