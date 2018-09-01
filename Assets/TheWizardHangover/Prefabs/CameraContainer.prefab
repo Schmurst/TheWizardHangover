@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114107575031419644}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d29a8b28be58c41883ed23a710c766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouse_fraction: 0
   mouse_buffer_on_edge_of_screen: 0.1
   max_scroll_speed: 0.05
   scene_extremities: {x: -10, y: 10}
