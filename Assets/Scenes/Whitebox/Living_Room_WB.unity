@@ -6319,7 +6319,7 @@ Prefab:
     - target: {fileID: 114107575031419644, guid: 231601fadc493014b8da7699f25ee2d7,
         type: 2}
       propertyPath: scene_extremities.y
-      value: 3.6
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 231601fadc493014b8da7699f25ee2d7, type: 2}
