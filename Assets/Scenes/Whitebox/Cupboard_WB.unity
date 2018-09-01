@@ -113,6 +113,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &672583379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: f303cb62ccb6b79438dcefa7e5935384,
+    type: 3}
+  m_PrefabInternal: {fileID: 1105294665}
+--- !u!64 &672583380
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672583379}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300004, guid: f303cb62ccb6b79438dcefa7e5935384, type: 3}
+--- !u!114 &672583381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672583379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 672583382}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 0
+--- !u!114 &672583382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672583379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd91f42d89b734db19a149b3f7016f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &710205408
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +578,37 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300008, guid: f303cb62ccb6b79438dcefa7e5935384, type: 3}
+--- !u!1 &1105294680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: f303cb62ccb6b79438dcefa7e5935384,
+    type: 3}
+  m_PrefabInternal: {fileID: 1105294665}
+--- !u!114 &1105294681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105294680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd91f42d89b734db19a149b3f7016f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1105294682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105294680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 1105294681}
+  m_tweens: []
+  m_events: 
+  m_cooldownSeconds: 0
 --- !u!1001 &1244813121
 Prefab:
   m_ObjectHideFlags: 0
@@ -637,6 +713,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1850512718257978, guid: febd7a208b3156f4090a4f1b05ae4777, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 225452520472737710, guid: febd7a208b3156f4090a4f1b05ae4777,
+        type: 2}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 225452520472737710, guid: febd7a208b3156f4090a4f1b05ae4777,
+        type: 2}
+      propertyPath: m_BlocksRaycasts
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

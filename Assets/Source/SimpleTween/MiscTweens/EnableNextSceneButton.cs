@@ -7,6 +7,6 @@ public class EnableNextSceneButton : MonoBehaviour, SimpleTween.ITweenEvent
     void SimpleTween.ITweenEvent.Play()
     {
         var levelTrans = FindObjectOfType<level_transition>();
-
+        levelTrans.EnableButton();
     }
 }
