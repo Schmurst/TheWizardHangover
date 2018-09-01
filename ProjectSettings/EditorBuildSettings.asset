@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/bedroom.unity
     guid: c83e631ad9f331e41a7ff212390e536f
+  - enabled: 1
+    path: Assets/Scenes/testcupboard.unity
+    guid: 573bd43dffbedc048bb8cbbc033595d5
   m_configObjects: {}
