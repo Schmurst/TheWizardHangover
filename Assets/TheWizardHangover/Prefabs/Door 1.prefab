@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4581347199366270}
   - component: {fileID: 114687932597344990}
   - component: {fileID: 114561817890960544}
+  - component: {fileID: 114961234894152706}
+  - component: {fileID: 114939236438665382}
   m_Layer: 0
   m_Name: Twister
   m_TagString: Untagged
@@ -111,6 +113,8 @@ GameObject:
   - component: {fileID: 114457438441367394}
   - component: {fileID: 114423571635935886}
   - component: {fileID: 114794843002020842}
+  - component: {fileID: 114848569984744334}
+  - component: {fileID: 114839912078813230}
   m_Layer: 0
   m_Name: Hinge
   m_TagString: Untagged
@@ -607,6 +611,7 @@ MonoBehaviour:
   - {fileID: 114406944491466314}
   m_events: 08000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
 --- !u!114 &114232678634874508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -623,6 +628,7 @@ MonoBehaviour:
   - {fileID: 114936630332999766}
   m_events: 20000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
   m_returnTweens:
   - {fileID: 114979518135072258}
 --- !u!114 &114406944491466314
@@ -697,6 +703,7 @@ MonoBehaviour:
   m_tweens: []
   m_events: 20000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
 --- !u!114 &114457438441367394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -818,6 +825,7 @@ MonoBehaviour:
   - {fileID: 114561817890960544}
   m_events: 08000000
   m_cooldownSeconds: 0.5
+  m_isOneShot: 0
 --- !u!114 &114794843002020842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -829,6 +837,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd91f42d89b734db19a149b3f7016f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114839912078813230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684345047898674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 0
+    m_Name: Wizard_Door_Open
+    m_tagName: 
+    m_IsLoop: 0
+  m_delay: 0
+--- !u!114 &114848569984744334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684345047898674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 114839912078813230}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 0
+  m_isOneShot: 0
 --- !u!114 &114936630332999766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -895,6 +936,23 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114939236438665382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1022862092906736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 0
+    m_Name: Wizard_Drawer_Open
+    m_tagName: 
+    m_IsLoop: 0
+  m_delay: 0
 --- !u!114 &114942506638435026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -911,6 +969,23 @@ MonoBehaviour:
   - {fileID: 114457438441367394}
   m_events: 10000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
+--- !u!114 &114961234894152706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1022862092906736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 114939236438665382}
+  m_tweens: []
+  m_events: 08000000
+  m_cooldownSeconds: 0
+  m_isOneShot: 0
 --- !u!114 &114979518135072258
 MonoBehaviour:
   m_ObjectHideFlags: 1
