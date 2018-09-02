@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: caba0874e671cfa4e88752cd9453be59
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: EggHigh
+    100004: EggHighBot
+    100006: EggHighTop
+    100008: EggLow
+    100010: EggLowBot
+    100012: EggLowBotCollision
+    100014: EggLowTop
+    100016: EggLowTopCollision
+    100018: EggMed
+    100020: EggMedBot
+    100022: EggMedTop
+    400000: //RootNode
+    400002: EggHigh
+    400004: EggHighBot
+    400006: EggHighTop
+    400008: EggLow
+    400010: EggLowBot
+    400012: EggLowBotCollision
+    400014: EggLowTop
+    400016: EggLowTopCollision
+    400018: EggMed
+    400020: EggMedBot
+    400022: EggMedTop
+    2100000: No Name
+    2300000: EggHigh
+    2300002: EggHighBot
+    2300004: EggHighTop
+    2300006: EggLow
+    2300008: EggLowBot
+    2300010: EggLowBotCollision
+    2300012: EggLowTop
+    2300014: EggLowTopCollision
+    2300016: EggMed
+    2300018: EggMedBot
+    2300020: EggMedTop
+    3300000: EggHigh
+    3300002: EggHighBot
+    3300004: EggHighTop
+    3300006: EggLow
+    3300008: EggLowBot
+    3300010: EggLowBotCollision
+    3300012: EggLowTop
+    3300014: EggLowTopCollision
+    3300016: EggMed
+    3300018: EggMedBot
+    3300020: EggMedTop
+    4300000: EggHigh
+    4300002: EggMed
+    4300004: EggLow
+    4300006: EggHighBot
+    4300008: EggMedBot
+    4300010: EggLowBot
+    4300012: EggMedTop
+    4300014: EggLowTop
+    4300016: EggHighTop
+    4300018: EggLowBotCollision
+    4300020: EggLowTopCollision
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

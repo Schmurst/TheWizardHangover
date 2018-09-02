@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Egg
+  m_Shader: {fileID: 4800000, guid: c654722ea9e41ab42b18c3903a9bd74b, type: 3}
+  m_ShaderKeywords: _ADDMULTIPLY_ON _COLOUROVERRIDE_ON _MULTIPLY_ON _TOGGLESWITCH0_ON
+    _USEPALLETTE_ON _VERTEXCOLOURS_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Pallette:
+        m_Texture: {fileID: 2800000, guid: 4738a02e1228e514d98b2c94964599b0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Add: 0
+    - _AddAmt: 0.04
+    - _AddMultiply: 1
+    - _Brightness: 1
+    - _ColourOverride: 1
+    - _Columns: 6
+    - _DoubleShadow: 0
+    - _Float0: 36
+    - _Float2: 0.78
+    - _Highlight: 0
+    - _HighlightAmt: 1.14
+    - _Multiply: 1
+    - _MultiplyAmt: 1.08
+    - _Rows: 6
+    - _Shadow: 0
+    - _ShadowAmt: 0.89
+    - _StartFrame: 20
+    - _ToggleSwitch0: 1
+    - _UsePallette: 1
+    - _VertexColours: 1
+    - __dirty: 0
+    m_Colors:
+    - _HueShift: {r: 1, g: 1, b: 1, a: 0}
