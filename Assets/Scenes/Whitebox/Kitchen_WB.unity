@@ -159,7 +159,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1556705745908704, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
@@ -12894,7 +12894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_target: {fileID: 1975429823}
   m_tweens: []
-  m_events: 
+  m_events: 20000000
   m_cooldownSeconds: 5
   m_isOneShot: 0
 --- !u!114 &1975429825
@@ -12927,7 +12927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_target: {fileID: 1975429823}
   m_tweens: []
-  m_events: 
+  m_events: 20000000
   m_cooldownSeconds: 5
   m_isOneShot: 0
 --- !u!114 &1975429827
@@ -12960,7 +12960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_target: {fileID: 1975429823}
   m_tweens: []
-  m_events: 
+  m_events: 20000000
   m_cooldownSeconds: 5
   m_isOneShot: 0
 --- !u!114 &1975429829
@@ -12993,7 +12993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_target: {fileID: 1975429823}
   m_tweens: []
-  m_events: 
+  m_events: 20000000
   m_cooldownSeconds: 5
   m_isOneShot: 0
 --- !u!4 &1983827499
