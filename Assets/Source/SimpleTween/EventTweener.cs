@@ -20,7 +20,9 @@ namespace SimpleTween
 	{
 		[SerializeField] EventType[] 	m_events;
         [SerializeField] float m_cooldownSeconds = 0f;
+        [SerializeField] bool m_isOneShot = false;
 
+        protected bool m_hasBeenPlayed;
         protected float m_timeOfLastEvent;
 
 		//--------------------------------------------------------------------------------
@@ -38,6 +40,9 @@ namespace SimpleTween
 			if (_type == EventType.none)
 				return false;
 
+            if (m_isOneShot && m_hasBeenPlayed)
+                return false;
+
             if (Time.time < m_timeOfLastEvent + m_cooldownSeconds)
                 return false;
 
@@ -54,6 +59,7 @@ namespace SimpleTween
 			if(ShouldPlayEvent(_type))
             {
                 Play();
+                m_hasBeenPlayed = true;
                 m_timeOfLastEvent = Time.time;            
             }
 		}
