@@ -28,6 +28,10 @@ public class AudioManager : Singleton<AudioManager> {
     private List<GameObject> m_playingList = new List<GameObject>();
 
     #region API
+    public void Initialize()
+    {
+        
+    }
     /// <summary>
     /// Play single audio from Resources in a single channel
     /// 
@@ -35,8 +39,7 @@ public class AudioManager : Singleton<AudioManager> {
     /// <param name="audioName">Audio name without etension</param>
     /// <param name="forcePlay">Stop current audio to be played and play new one or finish the current sound to be played and then play the following one</param>
     public void PlayAudio(AudioInfo ai)
-    {
-        
+    {        
                  
             AudioClip audioclip = Resources.Load(String.Format("Audio/{0}", ai.m_Name)) as AudioClip;
             if (audioclip == null)
@@ -120,7 +123,7 @@ public class AudioManager : Singleton<AudioManager> {
         }
         catch (Exception ex)
         {
-            Debug.LogWarning("AudioManager: " + audioName + " not found when calling Stop()");
+            Debug.LogWarning("AudioManager: " + ex.Message);
         }
         
     }
@@ -141,6 +144,9 @@ public class AudioManager : Singleton<AudioManager> {
         {
             Debug.LogError("AudioManager: Please attach audioMixer to the script");
         }
+
+        DontDestroyOnLoad(this.gameObject);
+
     }
 	
 	// Update is called once per frame
