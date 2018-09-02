@@ -4893,6 +4893,52 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: e4a23d1bd1757c74098232b12315f239, type: 3}
+--- !u!1001 &1912825601
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4983071579071668, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983071579071668, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983071579071668, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -9.199
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983071579071668, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983071579071668, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983071579071668, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983071579071668, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983071579071668, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634729205423840, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+      propertyPath: m_Name
+      value: BedroomClutter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 361a1c13a419c7144b97eb40be9c875d, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!198 &1927800018 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198951688888635440, guid: ca8b3eb5bdbd2ff4980a19d45edd2902,
