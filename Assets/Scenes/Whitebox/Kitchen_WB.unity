@@ -2129,7 +2129,6 @@ GameObject:
   - component: {fileID: 976639863}
   - component: {fileID: 976639862}
   - component: {fileID: 976639860}
-  - component: {fileID: 976639866}
   - component: {fileID: 976639861}
   m_Layer: 0
   m_Name: Drink
@@ -2375,7 +2374,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 272
-        y: 192
+        y: 176
         width: 100
         height: 32
       isBreakpoint: 0
@@ -2386,7 +2385,7 @@ MonoBehaviour:
           name: Wait
           isSystemEvent: 0
           isGlobal: 0
-        toState: WaitForClick
+        toState: NextScene
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2487,6 +2486,104 @@ MonoBehaviour:
         - realTime
         paramDataPos: 000000000000000000000000000000000000000001000000000000000000000002000000
         paramByteDataSize: 000000000000000000000000000000000100000001000000000000000000000001000000
+    - name: NextScene
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 101
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CallMethod
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ca51e900
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: EnableNextScene
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: NextScenePlaymaker
+          value: {fileID: 976639861}
+        fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 18000000120000000c000000270000000100000001000000
+        paramName:
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 000000000000000000000000000000000000000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -2581,7 +2678,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 976639859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd91f42d89b734db19a149b3f7016f86, type: 3}
+  m_Script: {fileID: 11500000, guid: 10d554c1bc7dd6f4fa3d776a307e18ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &976639862
@@ -2651,21 +2748,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &976639866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 976639859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_target: {fileID: 976639861}
-  m_tweens: []
-  m_events: 20000000
-  m_cooldownSeconds: 0
 --- !u!1001 &1034463087
 Prefab:
   m_ObjectHideFlags: 0
