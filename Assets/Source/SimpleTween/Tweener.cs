@@ -44,7 +44,7 @@ namespace SimpleTween
 
 			for (int i = m_tweens.Count - 1; i >= 0; i--)
 			{
-				if (!validTweenTypes.Contains(m_tweens[i].Type))
+                if (m_tweens[i] == null || !validTweenTypes.Contains(m_tweens[i].Type))
 					m_tweens.RemoveAt(i);
 				else
 					m_tweens[i].Initialise(m_target);
