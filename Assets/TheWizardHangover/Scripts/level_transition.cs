@@ -16,6 +16,7 @@ public class level_transition : MonoBehaviour {
         // last level we present flyer, then restart
         if (Flyer) {
             Flyer.SetActive(true);
+            GetComponentInChildren<Text>(true).text = "Sign";
 
             Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, -9.7f);
         }
@@ -112,6 +113,7 @@ public class level_transition : MonoBehaviour {
         if (Flyer && Flyer.active) {
             NextSceneIndex = 0;
             Flyer = null;
+            GetComponentInChildren<Text>(true).text = "Next Room";
         }
         Fading = true;
         theImages.SetActive(true);
