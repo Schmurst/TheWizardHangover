@@ -6,6 +6,7 @@ public class ParticleSystemTriggerTween : MonoBehaviour, SimpleTween.ITweenEvent
 {
     [SerializeField] ParticleSystem m_particles;
     [SerializeField] float m_duration = 1f;
+    [SerializeField] float m_delay = 0f;
 
     void Awake()
     {
@@ -14,8 +15,8 @@ public class ParticleSystemTriggerTween : MonoBehaviour, SimpleTween.ITweenEvent
 
     void SimpleTween.ITweenEvent.Play()
     {
-        m_particles.Play();
-        DoAfterSeconds(m_particles.Stop, m_duration);
+        DoAfterSeconds(m_particles.Play, m_delay);
+        DoAfterSeconds(m_particles.Stop, m_delay+m_duration);
     }
 
     IEnumerator DoAfterSecondsRoutine(System.Action _action, float _seconds)
