@@ -37,8 +37,7 @@ public class AudioManager : Singleton<AudioManager> {
     public void PlayAudio(AudioInfo ai)
     {
         
-        try
-        {            
+                 
             AudioClip audioclip = Resources.Load(String.Format("Audio/{0}", ai.m_Name)) as AudioClip;
             if (audioclip == null)
             {
@@ -79,12 +78,7 @@ public class AudioManager : Singleton<AudioManager> {
             source.Play();
             m_playingList.Add(go);
 
-        }
-        catch (System.Exception ex)
-        {
-            Debug.LogError("AudioManager: " + ex.Message);                
-        }
-        
+
     }
 
     /// <summary>
