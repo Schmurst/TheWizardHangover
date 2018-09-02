@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    private static T _instance;
+    protected static T _instance;
 
     //preventing concurrent call to the instance
     private static object _lock = new object();
@@ -32,12 +32,24 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
                     if (_instance == null)
                     {
-                        GameObject singleton = new GameObject();
-                        _instance = singleton.AddComponent<T>();
+                        //if (typeof(T).Name == "AudioManager")
+                        //{
+                        //    //Create prefab instead 
+                        //    GameObject audiomanager = Resources.Load<GameObject>(typeof(T).Name);
+                        //    GameObject go = GameObject.Instantiate(audiomanager);
+                        //    DontDestroyOnLoad(go);
+                        //}
+                        //else
+                        //{
+                            GameObject singleton = new GameObject();
+                            _instance = singleton.AddComponent<T>();
 
-                        singleton.name = "Singleton " + typeof(T).Name;
+                            singleton.name = "Singleton " + typeof(T).Name;
 
-                        DontDestroyOnLoad(singleton);
+                            DontDestroyOnLoad(singleton);
+                        //}
+
+                        
                     }
 
                 }

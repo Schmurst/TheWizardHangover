@@ -45,6 +45,7 @@ public class SplineController : MonoBehaviour, SimpleTween.ITweenEvent// IPointe
         {
             return;
         }
+        m_Positions.Clear();
         //Converting transform to positions
         foreach (Transform child in m_TransformRoot)
         {
@@ -88,6 +89,7 @@ public class SplineController : MonoBehaviour, SimpleTween.ITweenEvent// IPointe
 
     void ITweenEvent.Play()
     {
-        StartCoroutine(ExecuteSpline());
+        if(!isExecuting)
+            StartCoroutine(ExecuteSpline());
     }
 }
