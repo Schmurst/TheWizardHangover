@@ -1,30 +1,24 @@
 fileFormatVersion: 2
-guid: 3d121ef1646469c469ef731c491e45c1
+guid: ae1e4f9416defd94083fac71589acc28
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCylinder2
-    100004: pCylinder3
-    100006: pTorus1
+    100002: CrystalBall 1
+    100004: CrystalBall_STand
     400000: //RootNode
-    400002: pCylinder2
-    400004: pCylinder3
-    400006: pTorus1
+    400002: CrystalBall 1
+    400004: CrystalBall_STand
     2100000: phong1
-    2300000: pCylinder2
-    2300002: pCylinder3
-    2300004: pTorus1
-    3300000: pCylinder2
-    3300002: pCylinder3
-    3300004: pTorus1
-    4300000: pCylinder3
-    4300002: pCylinder2
-    4300004: pTorus1
-    9500000: //RootNode
+    2300000: CrystalBall 1
+    2300002: CrystalBall_STand
+    3300000: CrystalBall 1
+    3300002: CrystalBall_STand
+    4300000: CrystalBall
+    4300002: CrystalBall_STand
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -73,14 +67,14 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -99,7 +93,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
