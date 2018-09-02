@@ -13,6 +13,13 @@ public class level_transition : MonoBehaviour {
 
     public void EnableButton()
     {
+        // last level we present flyer, then restart
+        if (Flyer) {
+            Flyer.SetActive(true);
+
+            Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, -9.7f);
+        }
+
         GetComponentInChildren<Button>(true).gameObject.SetActive(true);
     }
 
@@ -36,6 +43,10 @@ public class level_transition : MonoBehaviour {
         DontDestroyOnLoad(this);
         NextSceneIndex = 1;
         ResetFade();
+        if (Flyer == null)
+            Flyer = GameObject.Find("Flyer") ? GameObject.Find("Flyer").gameObject : null;
+        if (Flyer)
+            Flyer.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -80,7 +91,8 @@ public class level_transition : MonoBehaviour {
         }
         yield return new WaitForEndOfFrame();
         //yield return new WaitForEndOfFrame();
-        Flyer = GameObject.Find("Flyer") ? GameObject.Find("Flyer").gameObject : null;
+        if(Flyer==null)
+            Flyer = GameObject.Find("Flyer") ? GameObject.Find("Flyer").gameObject : null;
         if (Flyer)
             Flyer.SetActive(false);
         while (t > 0.0f) {
@@ -97,18 +109,10 @@ public class level_transition : MonoBehaviour {
     private void StartFade(float aFadeOutTime, float aFadeInTime)
     {
         Debug.Log("StartFade");
-        // last level we present flyer, then restart
-        if (Flyer) {
-            if(Flyer.active) {
-                NextSceneIndex = 0;
-            } else {
-                Flyer.SetActive(true);
-
-                Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, -9.7f);
-                return;
-            }
+        if (Flyer && Flyer.active) {
+            NextSceneIndex = 0;
+            Flyer = null;
         }
-
         Fading = true;
         theImages.SetActive(true);
         GetComponentInChildren<Button>().gameObject.SetActive(false);
