@@ -220,6 +220,8 @@ GameObject:
   - component: {fileID: 35509214}
   - component: {fileID: 35509220}
   - component: {fileID: 35509219}
+  - component: {fileID: 35509222}
+  - component: {fileID: 35509221}
   m_Layer: 0
   m_Name: Curtains_02 (1)
   m_TagString: Untagged
@@ -327,6 +329,7 @@ MonoBehaviour:
   - {fileID: 35509214}
   m_events: 20000000
   m_cooldownSeconds: 0.1
+  m_isOneShot: 0
 --- !u!64 &35509216
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -453,6 +456,39 @@ MonoBehaviour:
   - {fileID: 35509219}
   m_events: 08000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
+--- !u!114 &35509221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35509212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 1
+    m_Name: Curtains
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &35509222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35509212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 35509221}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 1
+  m_isOneShot: 1
 --- !u!1 &166512445
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +506,8 @@ GameObject:
   - component: {fileID: 166512448}
   - component: {fileID: 166512453}
   - component: {fileID: 166512454}
+  - component: {fileID: 166512456}
+  - component: {fileID: 166512455}
   m_Layer: 0
   m_Name: Chest_Body1
   m_TagString: Untagged
@@ -507,6 +545,7 @@ MonoBehaviour:
   - {fileID: 166512449}
   m_events: 20000000
   m_cooldownSeconds: 1
+  m_isOneShot: 0
   m_returnTweens:
   - {fileID: 166512448}
 --- !u!114 &166512448
@@ -560,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_duration: 1
-  m_delay: 0
+  m_delay: 1
   m_resetOnComplete: 0
   m_euler: {x: 0, y: 0, z: -60}
   m_easeCurve:
@@ -692,6 +731,39 @@ MonoBehaviour:
   m_tweens: []
   m_events: 20000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
+--- !u!114 &166512455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166512445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 1
+    m_Name: Chest
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &166512456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166512445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 166512455}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 2
+  m_isOneShot: 0
 --- !u!1 &195715272
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +869,8 @@ GameObject:
   - component: {fileID: 197603203}
   - component: {fileID: 197603202}
   - component: {fileID: 197603201}
+  - component: {fileID: 197603208}
+  - component: {fileID: 197603207}
   m_Layer: 0
   m_Name: Doors
   m_TagString: Untagged
@@ -949,6 +1023,7 @@ MonoBehaviour:
   - {fileID: 197603202}
   m_events: 20000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
   m_returnTweens:
   - {fileID: 197603201}
 --- !u!114 &197603204
@@ -1072,8 +1147,41 @@ MonoBehaviour:
   - {fileID: 197603205}
   m_events: 20000000
   m_cooldownSeconds: 0.1
+  m_isOneShot: 0
   m_returnTweens:
   - {fileID: 197603204}
+--- !u!114 &197603207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197603199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 1
+    m_Name: Wardrobe
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &197603208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197603199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 197603207}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 1
+  m_isOneShot: 0
 --- !u!1 &205355123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1273,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205355123}
   m_Mesh: {fileID: 4300002, guid: 1e054bb0963e2f547a56af8803e7e9dc, type: 3}
+--- !u!1001 &211772185
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4688789283308056, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.7702115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688789283308056, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.8888416
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688789283308056, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4.718385
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688789283308056, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688789283308056, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688789283308056, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688789283308056, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688789283308056, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d0e2bf242fc63946807b1063adf6a3a, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &265710865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: e4a23d1bd1757c74098232b12315f239,
@@ -1485,6 +1635,7 @@ MonoBehaviour:
   - {fileID: 476254666}
   m_events: 20000000
   m_cooldownSeconds: 1
+  m_isOneShot: 0
 --- !u!65 &476254668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2178,6 +2329,8 @@ GameObject:
   - component: {fileID: 929498125}
   - component: {fileID: 929498131}
   - component: {fileID: 929498130}
+  - component: {fileID: 929498133}
+  - component: {fileID: 929498132}
   m_Layer: 8
   m_Name: Screen
   m_TagString: Untagged
@@ -2387,6 +2540,7 @@ MonoBehaviour:
   - {fileID: 929498123}
   m_events: 20000000
   m_cooldownSeconds: 1
+  m_isOneShot: 0
   m_returnTweens:
   - {fileID: 929498125}
 --- !u!114 &929498128
@@ -2462,6 +2616,7 @@ MonoBehaviour:
   - {fileID: 929498126}
   m_events: 20000000
   m_cooldownSeconds: 1
+  m_isOneShot: 0
   m_returnTweens:
   - {fileID: 929498128}
 --- !u!114 &929498130
@@ -2537,6 +2692,39 @@ MonoBehaviour:
   - {fileID: 929498130}
   m_events: 08000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
+--- !u!114 &929498132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929498122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 0
+    m_Name: Divider
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &929498133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929498122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 929498132}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 1
+  m_isOneShot: 0
 --- !u!1 &947500926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,6 +2740,8 @@ GameObject:
   - component: {fileID: 947500933}
   - component: {fileID: 947500932}
   - component: {fileID: 947500931}
+  - component: {fileID: 947500935}
+  - component: {fileID: 947500934}
   m_Layer: 0
   m_Name: Pillow_1
   m_TagString: Untagged
@@ -2782,6 +2972,39 @@ MonoBehaviour:
   - {fileID: 947500931}
   m_events: 20000000
   m_cooldownSeconds: 1
+  m_isOneShot: 0
+--- !u!114 &947500934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947500926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 1
+    m_Name: Pillow2
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &947500935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947500926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 947500934}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 0
+  m_isOneShot: 0
 --- !u!4 &951290640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010729430722, guid: 8a8a6edd2cd721748a5906c0946492ee,
@@ -3842,6 +4065,8 @@ GameObject:
   - component: {fileID: 1472416357}
   - component: {fileID: 1472416361}
   - component: {fileID: 1472416360}
+  - component: {fileID: 1472416363}
+  - component: {fileID: 1472416362}
   m_Layer: 0
   m_Name: MAttress
   m_TagString: Untagged
@@ -4061,6 +4286,39 @@ MonoBehaviour:
   - {fileID: 1472416360}
   m_events: 20000000
   m_cooldownSeconds: 1
+  m_isOneShot: 0
+--- !u!114 &1472416362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472416355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 1
+    m_Name: Boing
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &1472416363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472416355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 1472416362}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 1
+  m_isOneShot: 0
 --- !u!1 &1519102565
 GameObject:
   m_ObjectHideFlags: 0
@@ -4641,6 +4899,8 @@ GameObject:
   - component: {fileID: 1995156100}
   - component: {fileID: 1995156103}
   - component: {fileID: 1995156102}
+  - component: {fileID: 1995156105}
+  - component: {fileID: 1995156104}
   m_Layer: 0
   m_Name: Wardrobe_Drawer
   m_TagString: Untagged
@@ -4879,6 +5139,7 @@ MonoBehaviour:
   - {fileID: 1995156103}
   m_events: 20000000
   m_cooldownSeconds: 1
+  m_isOneShot: 0
   m_returnTweens:
   - {fileID: 1995156100}
   - {fileID: 1995156102}
@@ -4996,6 +5257,38 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1995156104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995156094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 1
+    m_Name: SlidingDrawer
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &1995156105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995156094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 1995156104}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 0
+  m_isOneShot: 0
 --- !u!1 &2025045347
 GameObject:
   m_ObjectHideFlags: 0
@@ -5102,6 +5395,8 @@ GameObject:
   - component: {fileID: 2038808470}
   - component: {fileID: 2038808469}
   - component: {fileID: 2038808466}
+  - component: {fileID: 2038808473}
+  - component: {fileID: 2038808472}
   m_Layer: 0
   m_Name: Pillow_2
   m_TagString: Untagged
@@ -5320,6 +5615,7 @@ MonoBehaviour:
   - {fileID: 2038808466}
   m_events: 20000000
   m_cooldownSeconds: 1
+  m_isOneShot: 0
 --- !u!65 &2038808471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5332,6 +5628,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.57188416, y: 1, z: 0.9957305}
   m_Center: {x: 0.0009801388, y: 0.08685669, z: -0.0022117496}
+--- !u!114 &2038808472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038808464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 1
+    m_Name: Pillow2
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &2038808473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038808464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 2038808472}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 0
+  m_isOneShot: 0
 --- !u!1 &2119221613
 GameObject:
   m_ObjectHideFlags: 0
@@ -5349,6 +5677,10 @@ GameObject:
   - component: {fileID: 2119221620}
   - component: {fileID: 2119221622}
   - component: {fileID: 2119221621}
+  - component: {fileID: 2119221624}
+  - component: {fileID: 2119221623}
+  - component: {fileID: 2119221626}
+  - component: {fileID: 2119221625}
   m_Layer: 0
   m_Name: Lock
   m_TagString: Untagged
@@ -5457,6 +5789,7 @@ MonoBehaviour:
   - {fileID: 2119221620}
   m_events: 20000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
 --- !u!23 &2119221617
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5654,3 +5987,68 @@ MonoBehaviour:
   - {fileID: 2119221621}
   m_events: 0800000010000000
   m_cooldownSeconds: 0
+  m_isOneShot: 0
+--- !u!114 &2119221623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119221613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 1
+    m_Name: Lock
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &2119221624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119221613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 2119221623}
+  m_tweens: []
+  m_events: 20000000
+  m_cooldownSeconds: 1
+  m_isOneShot: 0
+--- !u!114 &2119221625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119221613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338b0933be6f84dbf8e9225747ae9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioInfo:
+    m_Type: 0
+    m_Name: Thump
+    m_tagName: 
+    m_IsLoop: 0
+--- !u!114 &2119221626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119221613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b688d714e3ef41b38a44d88bb14267f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 2119221625}
+  m_tweens: []
+  m_events: 08000000
+  m_cooldownSeconds: 1
+  m_isOneShot: 0
